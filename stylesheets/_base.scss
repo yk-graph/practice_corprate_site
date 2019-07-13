@@ -1,0 +1,40 @@
+body {
+  color: #333;
+}
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+
+#mainVisual {
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background: darkcyan;
+}
+
+#about {
+  background: lightgray;
+}
+
+#concept {
+  background: lightblue;
+}
+
+#project {
+  background: lightgray;
+}
+
+#case {
+  background: lightblue;
+}
