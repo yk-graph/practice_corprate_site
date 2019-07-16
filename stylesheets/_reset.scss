@@ -107,3 +107,7 @@ input, select {
 *::after {
   box-sizing: border-box;
 }
+ul li,
+ol li {
+  list-style: none;
+}
