@@ -6,8 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>Document</title>
-</hea
-d>
+</head>
 <body id="topBody">
 
   <!-- 背景に罫線を入れるためのdiv　※bodyをrelativeに、中身のコンテンツをabsoluteにしてます -->
@@ -80,17 +79,16 @@ d>
 
   <!-- concept -->
       <section id="concept">
-        <div class="conceptBg"></div>
+        <div class="conceptBg">
+          <div class="conceptBg__heading">
+            <h3>失敗を恐れず、<br>行動しよう。</h3>
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+          </div>
+        </div>
         <div class="conceptBgText"><span>Our Philosophy</span></div>
         <div class="wrap conceptWrap">
           <h2>CONCEPT</h2>
           <!-- <img src="./images/concept_image.png" alt="コンセプトのイメージ写真"> -->
-          <div class="sectionBg">
-            <div class="sectonText">
-              <h3>失敗を恐れず、<br>行動しよう。</h3>
-              <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
-            </div>
-          </div>
           <div class="conceptDesc">
             <p>もともと30歳前後の社員2人が「ワクワクするイノベーションを起こしたい」と周囲に呼びかけ業務外の自発的な活動として始めました。
               SAMPLE.incは共に切磋琢磨するアクティブな集まっているコミュニティでもあり、様々な試みを実践する場です。
@@ -101,41 +99,51 @@ d>
       </section>
   <!-- [END] concept -->
 
-        <section id="project">
+  <!-- project -->
+      <section id="project">
+        <div class="projectBg"></div>
+        <div class="projectBgText"><span>Project</span></div>
+        <div class="wrap projectWrap">
           <h2>PROJECT</h2>
           <div class="projectDesc">
-            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
           </div>
-          <img src="./images/project_image.png" alt="プロジェクトのイメージ写真">
-          <div class="sectionBg">
-            <div class="sectonCopy"><span>Project</span></div>
-          </div>
-        </section>
-    
-        <section id="case">
-          <ul class="tabBtn">
-            <li>ケース1</li>
-            <li>ケース2</li>
-            <li>ケース3</li>
-            <li>ケース4</li>
+        </div>
+        <!-- <img src="./images/project_image.png" alt="プロジェクトのイメージ写真"> -->
+      </section>
+  <!-- [END] project -->
+  
+  <!-- case -->
+      <section id="case">
+        <div class="wrap">
+          <ul class="tab">
+            <li class="tab__btn active"><a href="">ケース1</a></li>
+            <li class="tab__btn"><a href="">ケース2</a></li>
+            <li class="tab__btn"><a href="">ケース3</a></li>
+            <li class="tab__btn"><a href="">ケース4</a></li>
           </ul>
           <div class="caseBox">
-            <img src="./images/case_image.png" alt="ケース1の事例紹介のイメージ写真">
-            <div class="caseDesc">
+            <img src="./images/case_image.png" alt="ケース1の事例紹介のイメージ写真" class="caseBox__image">
+            <div class="caseBox__desc">
               <h2>DAMMY SITE</h2>
-              <p class="caseDesc__subtitle">時速5kmの都市型モビリティ事業プロジェクト</p>
-              <p class="caseDesc__text">「自動運転時代の新しいモビリティ」をテーマとした事業開発プロジェクト。
+              <p class="subtitle">時速5kmの都市型モビリティ事業プロジェクト</p>
+              <p class="text">「自動運転時代の新しいモビリティ」をテーマとした事業開発プロジェクト。
                 「iino」は早歩き程度の速度である時速5kmで市街地を巡回し、走行中に自由に乗り降りできる。
                 ただ目的地に到達するのではなく、街をゆっくり移動することで、五感が開放され、いつもとは違う街並み、
                 人との会話、街の音を楽しむことができる。歩行者や自転車が混在する街での実用化を目指し、
                 歩行者や障害物を回避する技術の開発やプロトタイプの作成、実機によるサービス実証実験などに取り組む。</p>
             </div>
           </div>
-        </section>
-    
-        <section id="member">
+        </div>
+      </section>
+  <!-- [END] case -->
+
+  <!-- member -->
+      <section id="member">
+        <div class="wrap">
+          <div class="memberBg"></div>
           <h2>MEMBER</h2>
-          <img src="./images/member_image.png" alt="プロジェクトのイメージ写真">
+          <img src="./images/member_image.png" alt="プロジェクトのイメージ写真" class="memberImage">
           <div class="memberSlide">
             <img src="" alt="">
           </div>
@@ -150,36 +158,15 @@ d>
               そんなサービス開発を「Trapol」は挑戦していく。
             </p>
           </div>
-        </section>
-    
-        <section id="contact">
-          <form action="" action="post">
-            <div class="formWrap">
-              <label for="name">お名前</label>
-              <input type="text" id="name" name="name">
-            </div>
-            <div class="formWrap">
-              <label for="mail">メールアドレス</label>
-              <input type="email" id="mail" name="mail">
-            </div>
-            <div class="formWrap">
-              <label for="inquiry">お問合せ内容</label>
-              <select name="inquiry" id="inquiry">
-                <option value="price">料金について</option>
-                <option value="service">サービスについて</option>
-                <option value="other">その他</option>
-              </select>
-            </div>
-            <div class="formWrap">
-              <p>性別を選択</p>
-              <input id="male" type="radio" name="sex" value="male"><label for="male">男性</label>
-              <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
-            </div>
-            <div class="formWrap">
-              <input type="submit" value="送信する">
-            </div>
-          </form>
-        </section>
+        </div>
+      </section>
+  <!-- [END] case -->
+  
+      <section id="contact">
+        <div class="wrap">
+          <div class="contactBtn"><a href="">contact</a></div>
+        </div>
+      </section>
     </main>
   
     <footer id="footer">
