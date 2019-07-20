@@ -7,151 +7,173 @@
   <link rel="stylesheet" href="./stylesheets/style.css">
   <title>Document</title>
 </head>
-<body>
-  <div id="mainVisual">
+<body id="topBody">
+
+  <!-- 背景に罫線を入れるためのdiv　※bodyをrelativeに、中身のコンテンツをabsoluteにしてます -->
+  <div class="borderBg">
+    <div class="border"></div>
+    <div class="border"></div>
+    <div class="border"></div>
+    <div class="border"></div>
+  </div>
+  <!-- [END] borderBg -->
+
+  <!-- 背景に罫線を活かす為にbodyをrelative、allCotentsをabsoluteにしてます -->
+  <div id="allCotents">
+
+  <!-- headerは幅100vw,高さ80pxでFixidで設定しています -->
     <header id="header">
-      <div><a href="#">SAMPLE.inc</a></div>
+      <div class="logo">
+        <a href="#">SAMPLE.inc</a>
+      </div>
       <nav>
-        <ul>
-          <l1>CONCEPT</l1>
-          <l1>PROJECT</l1>
-          <l1>MEMBER</l1>
-          <l1>CONTACT</l1>
+        <ul class="navItems">
+          <l1 class="navList"><a href="#concept">CONCEPT</a></l1>
+          <l1 class="navList"><a href="#project">PROJECT</a></l1>
+          <l1 class="navList"><a href="#member">MEMBER</a></l1>
+          <l1 class="navList"><a href="#contact">CONTACT</a></l1>
         </ul>
       </nav>
     </header>
-    <div class="topContent">
-      <h1>Think big<br>Think inovation</h1>
-      <p>ワクワクするイノベーションを</p>
+  <!-- [END] header -->
+
+  <!-- heightは[画面の高さ-headerの高さ]で設定 -->
+    <div id="mainVisual">
+      <div class="wrap mainWrap">
+        <h1>Think big<br>Think inovation</h1>
+        <p>ワクワクするイノベーションを</p>
+      </div>
+      <div class="topNews">
+        <div class="topNews__date">2019/01/01</div>
+        <div class="topNews__text">ホームページを公開しました。</div>
+      </div>
     </div>
-    <div class="topNews">
-      <div class="topNews__date">2019/01/01</div>
-      <div class="topNews__text">ホームページを公開しました。</div>
-    </div>
-  </div>
+  <!-- [END] mainVisual -->
 
-  <main>
-    <section id="about">
-      <h2>SAMPLE.incはこういう集団です</h2>
-      <p>SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
-      <img src="./images/about_image.png" alt="会社概要のイメージ写真">
-      <ul class="features">
-        <li>
-          <h3>ポイント</h3>
-          <p>SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
-        </li>
-        <li>
-          <h3>ポイント</h3>
-          <p>SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
-        </li>
-        <li>
-          <h3>ポイント</h3>
-          <p>SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
-        </li>
-      </ul>
-    </section>
+  <!-- header,mainVisual,footer以外はmainで囲っています -->
+  <!-- wrapのclass：パララックスの画像以外は、全て1080pxで中央寄せになるように設定 -->
+    <main>
+  <!-- about -->
+      <section id="about">
+        <div class="wrap">
+          <h2>SAMPLE.incはこういう集団です</h2>
+          <p class="text">SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
+          <img src="./images/about_image.png" alt="会社概要のイメージ写真">
+          <ul class="features">
+            <li class="point">
+              <h3>ポイント</h3>
+              <p class="point__text">SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
+            </li>
+            <li class="point">
+              <h3>ポイント</h3>
+              <p class="point__text">SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
+            </li>
+            <li class="point">
+              <h3>ポイント</h3>
+              <p class="point__text">SAMPLE.incはボトムアップ型のイノベーション・プロジェクトを自発的に立ち上げ実践する、関西電力グループ社員を中心としたコミュニティです。</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+  <!-- [END] about -->
 
-    <section id="concept">
-      <h2>CONCEPT</h2>
-      <img src="./images/concept_image.png" alt="コンセプトのイメージ写真">
-      <div class="sectionBg">
-        <div class="sectonCopy"><span>Our Philosophy</span></div>
-        <div class="sectonText">
-          <h3>失敗を恐れず、<br>行動しよう。</h3>
-          <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+  <!-- concept -->
+      <section id="concept">
+        <div class="conceptBg">
+          <div class="conceptBg__heading">
+            <h3>失敗を恐れず、<br>行動しよう。</h3>
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+          </div>
         </div>
-      </div>
-      <div class="conceptDesc">
-        <p>もともと30歳前後の社員2人が「ワクワクするイノベーションを起こしたい」と周囲に呼びかけ業務外の自発的な活動として始めました。
-          SAMPLE.incは共に切磋琢磨するアクティブな集まっているコミュニティでもあり、様々な試みを実践する場です。
-          「新しいことにチャレンジしたい」「アイディアをカタチにしたい」「ワクワクするイノベーションを起こしたい」という熱意を出発点に、
-          新規事業の開発や既存事業の改革を目指し、様々なプロジェクトに取り組んでいます。</p>
-      </div>
-    </section>
+        <div class="conceptBgText"><span>Our Philosophy</span></div>
+        <div class="wrap conceptWrap">
+          <h2>CONCEPT</h2>
+          <!-- <img src="./images/concept_image.png" alt="コンセプトのイメージ写真"> -->
+          <div class="conceptDesc">
+            <p>もともと30歳前後の社員2人が「ワクワクするイノベーションを起こしたい」と周囲に呼びかけ業務外の自発的な活動として始めました。
+              SAMPLE.incは共に切磋琢磨するアクティブな集まっているコミュニティでもあり、様々な試みを実践する場です。
+              「新しいことにチャレンジしたい」「アイディアをカタチにしたい」「ワクワクするイノベーションを起こしたい」という熱意を出発点に、
+              新規事業の開発や既存事業の改革を目指し、様々なプロジェクトに取り組んでいます。</p>
+          </div>
+        </div>
+      </section>
+  <!-- [END] concept -->
 
-    <section id="project">
-      <h2>PROJECT</h2>
-      <div class="projectDesc">
-        <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
-      </div>
-      <img src="./images/project_image.png" alt="プロジェクトのイメージ写真">
-      <div class="sectionBg">
-        <div class="sectonCopy"><span>Project</span></div>
-      </div>
-    </section>
+  <!-- project -->
+      <section id="project">
+        <div class="projectBg"></div>
+        <div class="projectBgText"><span>Project</span></div>
+        <div class="wrap projectWrap">
+          <h2>PROJECT</h2>
+          <div class="projectDesc">
+            <p>ダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</p>
+          </div>
+        </div>
+        <!-- <img src="./images/project_image.png" alt="プロジェクトのイメージ写真"> -->
+      </section>
+  <!-- [END] project -->
+  
+  <!-- case -->
+      <section id="case">
+        <div class="wrap">
+          <ul class="tab">
+            <li class="tab__btn active"><a href="">ケース1</a></li>
+            <li class="tab__btn"><a href="">ケース2</a></li>
+            <li class="tab__btn"><a href="">ケース3</a></li>
+            <li class="tab__btn"><a href="">ケース4</a></li>
+          </ul>
+          <div class="caseBox">
+            <img src="./images/case_image.png" alt="ケース1の事例紹介のイメージ写真" class="caseBox__image">
+            <div class="caseBox__desc">
+              <h2>DAMMY SITE</h2>
+              <p class="subtitle">時速5kmの都市型モビリティ事業プロジェクト</p>
+              <p class="text">「自動運転時代の新しいモビリティ」をテーマとした事業開発プロジェクト。
+                「iino」は早歩き程度の速度である時速5kmで市街地を巡回し、走行中に自由に乗り降りできる。
+                ただ目的地に到達するのではなく、街をゆっくり移動することで、五感が開放され、いつもとは違う街並み、
+                人との会話、街の音を楽しむことができる。歩行者や自転車が混在する街での実用化を目指し、
+                歩行者や障害物を回避する技術の開発やプロトタイプの作成、実機によるサービス実証実験などに取り組む。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!-- [END] case -->
 
-    <section id="case">
-      <ul class="tabBtn">
-        <li>ケース1</li>
-        <li>ケース2</li>
-        <li>ケース3</li>
-        <li>ケース4</li>
-      </ul>
-      <div class="caseBox">
-        <img src="./images/case_image.png" alt="ケース1の事例紹介のイメージ写真">
-        <div class="caseDesc">
-          <h2>DAMMY SITE</h2>
-          <p class="caseDesc__subtitle">時速5kmの都市型モビリティ事業プロジェクト</p>
-          <p class="caseDesc__text">「自動運転時代の新しいモビリティ」をテーマとした事業開発プロジェクト。
-            「iino」は早歩き程度の速度である時速5kmで市街地を巡回し、走行中に自由に乗り降りできる。
-            ただ目的地に到達するのではなく、街をゆっくり移動することで、五感が開放され、いつもとは違う街並み、
-            人との会話、街の音を楽しむことができる。歩行者や自転車が混在する街での実用化を目指し、
-            歩行者や障害物を回避する技術の開発やプロトタイプの作成、実機によるサービス実証実験などに取り組む。</p>
+  <!-- member -->
+      <section id="member">
+        <div class="wrap">
+          <div class="memberBg"></div>
+          <h2>MEMBER</h2>
+          <img src="./images/member_image.png" alt="プロジェクトのイメージ写真" class="memberImage">
+          <div class="memberSlide">
+            <img src="" alt="">
+          </div>
+          <div class="memberDesc">
+            <p class="text">「物流」と「旅行」を組み合わせた、新しい旅行サービスの事業開発プロジェクト。コンセプトは「届ける、それが旅になる」。
+              例えば、日本人がベトナムに旅行する場合に、日本の製品を欲しがっているベトナム人を検索し、トラベラーが日本からモノを届けてあげる。
+              現地人は、海外でしか買えないモノが手に入り、トラベラーは現地で友達のような交流ができるようになる。
+              「Trapol」は新しい価値観や文化の違いに触れられる、新しい旅行サービスの実現に取り組む。
+              「偶然性から生まれる旅の感動を、より多くの人に体験してもらいたい」想いから構想がスタート。
+              「予想していなかった旅での出会い」、「初めて食べた美味しい食べ物」など、偶然が引き起こした新しい発見や気付きが、実は旅行の印象として心に強く焼き付いている。
+              また、すぐにモノが届くAmazonのような便利さは無いが、トラベラーが届けてくれるストーリーがモノの価値に加え、温かみのある体験を与えてくれる。
+              そんなサービス開発を「Trapol」は挑戦していく。
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="member">
-      <h2>MEMBER</h2>
-      <img src="./images/member_image.png" alt="プロジェクトのイメージ写真">
-      <div class="memberSlide">
-        <img src="./images/memberList_image.png" alt="">
-      </div>
-      <div class="memberDesc">
-        <p class="text">「物流」と「旅行」を組み合わせた、新しい旅行サービスの事業開発プロジェクト。コンセプトは「届ける、それが旅になる」。
-          例えば、日本人がベトナムに旅行する場合に、日本の製品を欲しがっているベトナム人を検索し、トラベラーが日本からモノを届けてあげる。
-          現地人は、海外でしか買えないモノが手に入り、トラベラーは現地で友達のような交流ができるようになる。
-          「Trapol」は新しい価値観や文化の違いに触れられる、新しい旅行サービスの実現に取り組む。
-          「偶然性から生まれる旅の感動を、より多くの人に体験してもらいたい」想いから構想がスタート。
-          「予想していなかった旅での出会い」、「初めて食べた美味しい食べ物」など、偶然が引き起こした新しい発見や気付きが、実は旅行の印象として心に強く焼き付いている。
-          また、すぐにモノが届くAmazonのような便利さは無いが、トラベラーが届けてくれるストーリーがモノの価値に加え、温かみのある体験を与えてくれる。
-          そんなサービス開発を「Trapol」は挑戦していく。
-        </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <form action="" action="post">
-        <div class="formWrap">
-          <label for="name">お名前</label>
-          <input type="text" id="name" name="name">
+      </section>
+  <!-- [END] case -->
+  
+      <section id="contact">
+        <div class="wrap">
+          <div class="contactBtn"><a href="">contact</a></div>
         </div>
-        <div class="formWrap">
-          <label for="mail">メールアドレス</label>
-          <input type="email" id="mail" name="mail">
-        </div>
-        <div class="formWrap">
-          <label for="inquiry">お問合せ内容</label>
-          <select name="inquiry" id="inquiry">
-            <option value="price">料金について</option>
-            <option value="service">サービスについて</option>
-            <option value="other">その他</option>
-          </select>
-        </div>
-        <div class="formWrap">
-          <p>性別を選択</p>
-          <input id="male" type="radio" name="sex" value="male"><label for="male">男性</label>
-          <input id="female" type="radio" name="sex" value="female"><label for="female">女性</label>
-        </div>
-        <div class="formWrap">
-          <input type="submit" value="送信する">
-        </div>
-      </form>
-    </section>
-
+      </section>
+    </main>
+  
     <footer id="footer">
       <p class="copy">&copy; SAMPLE, Inc.</p>
     </footer>
-  </main>
+
+  </div>
+
 </body>
 </html>
