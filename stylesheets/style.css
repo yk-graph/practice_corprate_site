@@ -258,18 +258,21 @@ h2 {
   position: relative;
   margin-bottom: 250px; }
   #about h2 {
+    position: relative;
+    z-index: 6;
     margin-bottom: 30px; }
   #about .text {
     display: inline-block;
     width: 600px;
     font-size: 2rem;
     line-height: 3.6rem;
-    margin-bottom: 400px; }
-  #about img {
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 6; }
+  #about .aboutImage {
     position: absolute;
-    top: 100px;
-    right: 100px;
-    width: 480px; }
+    top: -100px;
+    right: 50px; }
   #about .features {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -292,7 +295,7 @@ h2 {
 #concept {
   position: relative;
   height: 900px;
-  margin-bottom: 200px; }
+  margin-bottom: 400px; }
   #concept .conceptBg {
     position: absolute;
     top: -80px;
@@ -301,23 +304,24 @@ h2 {
     width: 75%;
     height: 600px;
     z-index: 1; }
-    #concept .conceptBg__heading {
-      width: 400px;
-      position: absolute;
-      bottom: 100px;
-      right: 200px;
-      padding-left: 50px;
-      border-left: 5px solid #bb1b1b; }
-      #concept .conceptBg__heading h3 {
-        font-size: 3rem;
-        line-height: 4.5rem;
-        margin-bottom: 30px; }
-      #concept .conceptBg__heading p {
-        line-height: 3rem; }
+  #concept .conceptBgHeading {
+    width: 400px;
+    position: relative;
+    top: 200px;
+    left: 600px;
+    z-index: 7;
+    padding-left: 50px;
+    border-left: 5px solid #bb1b1b; }
+    #concept .conceptBgHeading h3 {
+      font-size: 3rem;
+      line-height: 4.5rem;
+      margin-bottom: 30px; }
+    #concept .conceptBgHeading p {
+      line-height: 3rem; }
   #concept .conceptBgText {
     position: absolute;
     top: -30px;
-    left: 120px;
+    right: 90px;
     font-size: 18rem;
     width: 1360px;
     color: #d4d4d4;
@@ -327,9 +331,15 @@ h2 {
     z-index: 3; }
     #concept .conceptWrap h2 {
       font-size: 4.5rem;
-      margin-bottom: 550px; }
+      margin-bottom: 630px; }
+    #concept .conceptWrap .conceptImage {
+      position: absolute;
+      top: 165px;
+      left: -70px; }
     #concept .conceptWrap .conceptDesc {
-      width: 70%; }
+      width: 70%;
+      position: relative;
+      z-index: 6; }
       #concept .conceptWrap .conceptDesc p {
         line-height: 2.8rem; }
 
@@ -349,7 +359,6 @@ h2 {
     top: -250px;
     left: 150px;
     font-size: 18rem;
-    width: 1360px;
     color: #d4d4d4;
     z-index: 2; }
   #project .projectWrap {
@@ -362,6 +371,10 @@ h2 {
       width: 30%; }
       #project .projectWrap .projectDesc p {
         line-height: 2.8rem; }
+    #project .projectWrap .projectImage {
+      position: absolute;
+      top: 50px;
+      left: 400px; }
 
 #case {
   margin-bottom: 480px; }
@@ -383,11 +396,11 @@ h2 {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
       #case .tab__btn.active {
-        background: #bb1b1b; }
-        #case .tab__btn.active a {
-          color: #fff; }
+        background: #bb1b1b;
+        color: #fff; }
   #case .caseBox {
     width: 100%;
     border: 5px solid #ececec;
@@ -395,46 +408,77 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    #case .caseBox__image {
-      width: 320px;
-      height: 240px;
-      -o-object-fit: contain;
-      object-fit: contain;
-      margin-right: 100px; }
-    #case .caseBox__desc {
-      width: 550px; }
-      #case .caseBox__desc .subtitle {
-        margin: 40px 0;
-        font-size: 2rem; }
-      #case .caseBox__desc .text {
-        line-height: 2.8rem; }
+    #case .caseBox .caseWrap {
+      display: none; }
+      #case .caseBox .caseWrap.active {
+        display: block; }
+      #case .caseBox .caseWrap__image {
+        width: 320px;
+        height: 240px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        margin-right: 100px;
+        float: left; }
+      #case .caseBox .caseWrap__desc {
+        width: 550px;
+        float: left; }
+        #case .caseBox .caseWrap__desc .subtitle {
+          margin: 40px 0;
+          font-size: 2rem; }
+        #case .caseBox .caseWrap__desc .text {
+          line-height: 2.8rem; }
 
 #member {
   margin-bottom: 160px;
   position: relative; }
   #member .memberBg {
     position: absolute;
-    top: -195px;
-    left: -90px;
+    top: -125px;
+    left: -180px;
     width: 900px;
     height: 480px;
     background: #bb1b1b;
     z-index: 1; }
+  #member .memberBgImage {
+    position: absolute;
+    top: -360px;
+    left: -90px;
+    z-index: 2; }
   #member h2 {
     position: relative;
     font-size: 3.6rem;
     color: #fff;
-    z-index: 2;
-    margin-bottom: 600px; }
+    z-index: 4;
+    margin-bottom: 360px; }
   #member .memberImage {
     position: absolute;
-    top: 200px;
-    left: 180px;
-    z-index: 2; }
+    top: -100px;
+    left: 400px;
+    z-index: 3; }
   #member .memberDesc {
     width: 780px;
     margin: 0 auto;
     line-height: 3.6rem; }
+  #member .simply-scroll-container {
+    position: relative;
+    margin: 100px 0; }
+  #member .simply-scroll-clip {
+    position: relative;
+    overflow: hidden; }
+  #member .simply-scroll-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 300px; }
+  #member .simply-scroll-list li {
+    list-style: none !important;
+    float: left;
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    padding: 0; }
+  #member .simply-scroll-list li img {
+    display: block; }
 
 #contact {
   width: 100%;
